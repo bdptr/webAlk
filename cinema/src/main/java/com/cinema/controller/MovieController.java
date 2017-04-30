@@ -13,18 +13,17 @@ import com.cinema.service.MovieService;
 
 @RestController
 public class MovieController {
-	
 	@Autowired
 	private MovieService movieService;
 
 	@RequestMapping(value = "/movies", method = RequestMethod.GET)
 	public List<Movie> listMovies() {
-		return movieService.getMovies();
+		return movieService.listMovies();
 	}
 
 	@RequestMapping(value = "/movies/{genre}", method = RequestMethod.GET)
 	public List<Movie> listMoviesByGenre(@PathVariable("genre") String genre) {
-		return movieService.findMoviesByGenre(genre);
+		return movieService.listMoviesByGenre(genre);
 	}
 
 	@RequestMapping(value = "/movies/cinema/{name}")

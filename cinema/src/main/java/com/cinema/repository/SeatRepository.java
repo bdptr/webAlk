@@ -12,5 +12,5 @@ import com.cinema.model.Seat;
 public interface SeatRepository extends JpaRepository<Seat, Long> {
 
 	@Query("select se from Show s join s.seats se where s.id = ?1")
-	public List<Seat> listSeatsOfShow(Long id);
+	public List<Seat> findSeatsOfShow(Long id);
 }

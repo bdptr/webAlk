@@ -20,11 +20,11 @@ public class MovieServiceImpl implements MovieService {
 	@Autowired
 	private ShowRepository showRepo;
 
-	public List<Movie> getMovies() {
+	public List<Movie> listMovies() {
 		return movieRepo.findAll();
 	}
 
-	public List<Movie> findMoviesByGenre(String genre) {
+	public List<Movie> listMoviesByGenre(String genre) {
 		return movieRepo.findMoviesByGenre(genre);
 	}
 
