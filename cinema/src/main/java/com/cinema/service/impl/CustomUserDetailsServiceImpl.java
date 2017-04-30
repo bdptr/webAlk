@@ -34,6 +34,4 @@ public class CustomUserDetailsServiceImpl implements CustomUserDetailsService {
 			return new CustomUserDetails(user, userRoles);
 		}
 	}
-
-	
 }
