@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cinema.model.Show;
-import com.cinema.repository.ShowRepository;
+import com.cinema.service.ShowService;
 
 @RestController
 public class ShowController {
-
+	
 	@Autowired
-	private ShowRepository repo;
+	private ShowService showService;
 
 	@RequestMapping(value = "/shows", method = RequestMethod.GET)
 	public List<Show> listShows() {
-		return repo.findAll();
+		return showService.listShows();
 	}
 }

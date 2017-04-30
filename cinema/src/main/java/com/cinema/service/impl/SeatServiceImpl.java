@@ -15,6 +15,7 @@ import com.cinema.service.SeatService;
 
 @Service("seatService")
 public class SeatServiceImpl implements SeatService {
+	
 	@Autowired
 	private SeatRepository seatRepo;
 
