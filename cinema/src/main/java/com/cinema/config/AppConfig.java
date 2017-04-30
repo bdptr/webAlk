@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.cinema")
-@EnableJpaRepositories(basePackages="com.cinema")
+@EnableJpaRepositories(basePackages = "com.cinema")
 public class AppConfig extends WebMvcConfigurerAdapter {
 }
-

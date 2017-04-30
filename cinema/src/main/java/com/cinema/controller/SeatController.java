@@ -20,32 +20,27 @@ public class SeatController {
 
 	@Autowired
 	private SeatRepository seatRepo;
-	
+
 	@Autowired
 	private UserRepository userRepo;
 
-	@RequestMapping(value="/shows/{id}/seats", method = RequestMethod.GET)
-	public List<Seat> findSeatsOfShow(@PathVariable("id") Long id)
-	{
+	@RequestMapping(value = "/shows/{id}/seats", method = RequestMethod.GET)
+	public List<Seat> findSeatsOfShow(@PathVariable("id") Long id) {
 		return seatRepo.listSeatsOfShow(id);
 	}
-	
-	@RequestMapping(value="/buy/seat/{seatid}/user/{userid}", method=RequestMethod.POST)
-	public ResponseEntity<?> buyTicket(@PathVariable("seatid")Long seatid, @PathVariable("userid")Long userid)
-	{
+
+	@RequestMapping(value = "/buy/seat/{seatid}/user/{userid}", method = RequestMethod.POST)
+	public ResponseEntity<?> buyTicket(@PathVariable("seatid") Long seatid, @PathVariable("userid") Long userid) {
 		Seat seat = seatRepo.findOne(seatid);
-		
-		if(seat.getIsFree())
-		{
+
+		if (seat.getIsFree()) {
 			seat.setIsFree(false);
 			User user = userRepo.findOne(userid);
 			user.addSeat(seat);
 			userRepo.save(user);
-			
-			return new ResponseEntity<Seat>(seatRepo.save(seat),HttpStatus.OK);
-		}
-		else
-		{
+
+			return new ResponseEntity<Seat>(seatRepo.save(seat), HttpStatus.OK);
+		} else {
 			return new ResponseEntity<Void>(HttpStatus.FORBIDDEN);
 		}
 	}

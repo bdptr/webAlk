@@ -16,19 +16,20 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 public class Cinema {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	@Column(unique=true, updatable=false)
+
+	@Column(unique = true, updatable = false)
 	private String name;
-	
+
 	@OneToMany(mappedBy = "cinema", cascade = CascadeType.ALL)
-	@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+	@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 	private List<Show> cinemaShows = new ArrayList<>();
-	
-	public Cinema(){}
+
+	public Cinema() {
+	}
 
 	public Long getId() {
 		return id;
@@ -47,17 +48,15 @@ public class Cinema {
 	}
 
 	public void setShows(List<Show> shows) {
-		
-		for(Show show : shows)
-		{
+
+		for (Show show : shows) {
 			show.setCinema(this);
 		}
-		
+
 		this.cinemaShows = shows;
 	}
-	
-	public void addShow(Show show)
-	{
+
+	public void addShow(Show show) {
 		show.setCinema(this);
 		this.cinemaShows.add(show);
 	}

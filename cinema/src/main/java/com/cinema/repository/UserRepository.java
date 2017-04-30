@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Modifying
 	@Query("update User u set u.userDetails=?1 where u.id=?2")
 	public int editUserDetails(String details, Long id);
-	
+
 	@Query("select u from User u where u.name=?1")
 	public User findUserByName(String name);
 }

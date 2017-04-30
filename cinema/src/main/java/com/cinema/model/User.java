@@ -11,27 +11,28 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class User {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	private String name;
-	
+
 	private String password;
-	
+
 	private String userDetails;
-	
+
 	@OneToMany
 	private List<Seat> seats = new ArrayList<>();
-	
-	public User(){}
-	
-	 public User(User user) {
-         this.id = user.id;
-         this.name = user.name;    
-         this.password = user.password;      
- }
+
+	public User() {
+	}
+
+	public User(User user) {
+		this.id = user.id;
+		this.name = user.name;
+		this.password = user.password;
+	}
 
 	public String getName() {
 		return name;
@@ -68,9 +69,8 @@ public class User {
 	public void setSeats(List<Seat> seats) {
 		this.seats = seats;
 	}
-	
-	public void addSeat(Seat seat)
-	{
+
+	public void addSeat(Seat seat) {
 		this.seats.add(seat);
 	}
 }

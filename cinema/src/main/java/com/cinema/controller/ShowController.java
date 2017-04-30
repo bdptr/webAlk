@@ -15,10 +15,9 @@ public class ShowController {
 
 	@Autowired
 	private ShowRepository repo;
-	
-	@RequestMapping(value="/shows", method=RequestMethod.GET)
-	public List<Show> listShows()
-	{
+
+	@RequestMapping(value = "/shows", method = RequestMethod.GET)
+	public List<Show> listShows() {
 		return repo.findAll();
 	}
 }

@@ -9,12 +9,13 @@ import javax.persistence.Id;
 public class Seat {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	private Boolean isFree;
-	
-	public Seat(){}
+
+	public Seat() {
+	}
 
 	public Long getId() {
 		return id;
@@ -27,6 +28,5 @@ public class Seat {
 	public void setIsFree(Boolean isFree) {
 		this.isFree = isFree;
 	}
-	
-	
+
 }

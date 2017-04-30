@@ -17,29 +17,30 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
-@Table(name="shows")
+@Table(name = "shows")
 public class Show {
 
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	private Date showDate;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "movie_id")
-	@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+	@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 	private Movie movie;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "cinema_id")
-	@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+	@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 	private Cinema cinema;
-	
+
 	@OneToMany
 	private List<Seat> seats = new ArrayList<>();
-	
-	public Show(){}
+
+	public Show() {
+	}
 
 	public Long getId() {
 		return id;
@@ -76,9 +77,8 @@ public class Show {
 	public void setSeats(List<Seat> seats) {
 		this.seats = seats;
 	}
-	
-	public void addSeat(Seat seat)
-	{
+
+	public void addSeat(Seat seat) {
 		this.seats.add(seat);
 	}
 }
