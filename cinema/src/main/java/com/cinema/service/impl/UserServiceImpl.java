@@ -38,9 +38,9 @@ public class UserServiceImpl implements UserService {
 	};
 
 	/**
-	 * Retrieves a collection of all users.
+	 * Retrieves a list of all users.
 	 * 
-	 * @return Returns the collection of all users.
+	 * @return Returns the list of all users.
 	 */
 	public List<User> getUsers() {
 		return userRepo.findAll();

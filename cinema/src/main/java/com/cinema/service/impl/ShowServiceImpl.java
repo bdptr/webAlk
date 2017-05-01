@@ -16,12 +16,12 @@ public class ShowServiceImpl implements ShowService {
 	private ShowRepository showRepo;
 
 	/**
-	 * Retrieves a collection of shows of a specific cinema based on a given
+	 * Retrieves a list of shows of a specific cinema based on a given
 	 * cinema name.
 	 * 
 	 * @param cinemaName
 	 *            Represents the cinema we want to filter the shows by.
-	 * @return Returns the collection of shows of a specific cinema based on a
+	 * @return Returns the list of shows of a specific cinema based on a
 	 *         given cinema name.
 	 */
 	public List<Show> findShowByCinema(String cinemaName) {
@@ -29,9 +29,9 @@ public class ShowServiceImpl implements ShowService {
 	}
 
 	/**
-	 * Retrieves a collection of all shows.
+	 * Retrieves a list of all shows.
 	 * 
-	 * @return Returns the collection of all movies.
+	 * @return Returns the list of all movies.
 	 */
 	public List<Show> listShows() {
 		return showRepo.findAll();

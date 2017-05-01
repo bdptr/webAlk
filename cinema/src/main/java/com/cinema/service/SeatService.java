@@ -9,7 +9,7 @@ import com.cinema.model.Seat;
 public interface SeatService {
 
 	/**
-	 * Retrieves a collection of seats for a specific show.
+	 * Retrieves a list of seats for a specific show.
 	 * 
 	 * @param showId
 	 *            The identifier of the show.

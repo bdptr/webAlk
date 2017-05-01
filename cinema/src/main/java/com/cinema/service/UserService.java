@@ -21,9 +21,9 @@ public interface UserService {
 	User editUserDetails(String details, Long id);
 
 	/**
-	 * Retrieves a collection of all users.
+	 * Retrieves a list of all users.
 	 * 
-	 * @return Returns the collection of all users.
+	 * @return Returns the list of all users.
 	 */
 	List<User> getUsers();
 

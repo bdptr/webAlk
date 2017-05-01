@@ -23,7 +23,7 @@ public class SeatServiceImpl implements SeatService {
 	private UserRepository userRepo;
 
 	/**
-	 * Retrieves a collection of seats for a specific show.
+	 * Retrieves a list of seats for a specific show.
 	 * 
 	 * @param showId
 	 *            The identifier of the show.
