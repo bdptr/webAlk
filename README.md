@@ -9,6 +9,10 @@ https://goo.gl/EaQ4MZ
   URL: /movies<br />
   Metódus: GET<br />
   
+### Film lekérdezése azonosító alapján:
+  URL: /movie/{id}<br />
+  Metódus: GET<br />
+  
 ### Filmek lekérdezése műfaj szerint:
   URL: /movies/{genre}<br />
   Metódus: GET<br />
