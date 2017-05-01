@@ -25,6 +25,9 @@ import com.cinema.repository.ShowRepository;
 import com.cinema.repository.UserRepository;
 import com.cinema.repository.UserRolesRepository;
 
+/**
+ * Filling database with test data
+ */
 @SpringBootApplication(scanBasePackages = "com.cinema")
 public class CinemaApplication implements CommandLineRunner {
 
@@ -127,7 +130,7 @@ public class CinemaApplication implements CommandLineRunner {
 		rolesRepo.save(roleUser);
 
 		UserRole roleCostumer = new UserRole();
-		roleCostumer.setRole("ROLE_COSTUMER");
+		roleCostumer.setRole("ROLE_CUSTOMER");
 		roleCostumer.setUserid(2L);
 		rolesRepo.save(roleCostumer);
 	}
