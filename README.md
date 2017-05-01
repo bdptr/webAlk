@@ -41,6 +41,10 @@ https://goo.gl/EaQ4MZ
   URL: /users<br />
   Metódus: GET<br />
   
+### CUSTOMER role-lal rendelkező felhasználók lekérdezése:
+  URL: /users/customers<br />
+  Metódus: GET<br />
+  
 ### Bejelentkezett felhasználó kijelentkeztetése:
   URL: /logout<br />
   Metódus: POST<br />
