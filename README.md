@@ -86,3 +86,9 @@ https://goo.gl/EaQ4MZ
   - Long userroleid;
   - Long userid;
   - String role;
+
+# A tervezés folyamata
+A use-case diagram alapján megtervezésre kerül a szükséges adatbázis struktúra, amely MySQL-ben lesz megvalósítva.
+Az adatbázist úgy kell felépíteni, hogy a diagramon megtervezett használati esetek, felhasználói szerepkörök, kapcsolatok és függőségek egyszerűen kivitelezhetők legyenek.
+
+Az adatbázis létrehozása után létrehozzuk a megfelelő model-eket, melyeket az adatbázis lekérdezések során feltöltünk a szükséges adatokkal. Ennél a lépsénél figyelembe kell venni, hogy a backend a frontend számára a megfelelő adatokat a megfelelő formában adja vissza.
