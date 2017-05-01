@@ -109,15 +109,15 @@ public class CinemaApplication implements CommandLineRunner {
 
 		User user = new User();
 		user.setName("user");
-		user.setPassword("password");
+		user.setPassword("user");
 		user.setUserDetails("original user details");
 
 		userRepo.save(user);
 
 		User costumer = new User();
-		costumer.setName("costumer");
-		costumer.setPassword("password");
-		costumer.setUserDetails("original costumer details");
+		costumer.setName("customer");
+		costumer.setPassword("customer");
+		costumer.setUserDetails("original customer details");
 
 		userRepo.save(costumer);
 

@@ -21,17 +21,38 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepo;
 
+	/**
+	 * Updates a specific user based on the given details and user identifier.
+	 * 
+	 * @param details
+	 *            User details.
+	 * @param id
+	 *            User identifier.
+	 * @return User data.
+	 */
 	public User editUserDetails(String details, Long id) {
 		User user = userRepo.findOne(id);
 		user.setUserDetails(details);
 
 		return userRepo.save(user);
 	};
-	
-	public List<User> editUserDetails() {
+
+	/**
+	 * Retrieves a collection of all users.
+	 * 
+	 * @return Returns the collection of all users.
+	 */
+	public List<User> getUsers() {
 		return userRepo.findAll();
 	};
-	
+
+	/**
+	 * Logs out the logged in user.
+	 * 
+	 * @param request
+	 * @param response
+	 * @return Returns a confirmation message.
+	 */
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (auth != null) {

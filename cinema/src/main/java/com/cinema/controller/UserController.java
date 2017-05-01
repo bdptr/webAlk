@@ -28,7 +28,7 @@ public class UserController {
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public List<User> editUserDetails() {
-		return userService.editUserDetails();
+		return userService.getUsers();
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)

@@ -8,9 +8,31 @@ import javax.servlet.http.HttpServletResponse;
 import com.cinema.model.User;
 
 public interface UserService {
+
+	/**
+	 * Updates a specific user based on the given details and user identifier.
+	 * 
+	 * @param details
+	 *            User details.
+	 * @param id
+	 *            User identifier.
+	 * @return User data.
+	 */
 	User editUserDetails(String details, Long id);
-	
-	List<User> editUserDetails();
-	
+
+	/**
+	 * Retrieves a collection of all users.
+	 * 
+	 * @return Returns the collection of all users.
+	 */
+	List<User> getUsers();
+
+	/**
+	 * Logs out the logged in user.
+	 * 
+	 * @param request
+	 * @param response
+	 * @return Returns a confirmation message.
+	 */
 	String logoutPage(HttpServletRequest request, HttpServletResponse response);
 }
