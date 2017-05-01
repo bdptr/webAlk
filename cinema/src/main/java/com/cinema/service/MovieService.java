@@ -14,6 +14,15 @@ public interface MovieService {
 	List<Movie> listMovies();
 
 	/**
+	 * Retrieves a movie based on a given movie identifier.
+	 * 
+	 * @param id
+	 *            The identifier of the movie
+	 * @return Returns a movie based on the given movie identifier
+	 */
+	Movie getMovieById(Long id);
+
+	/**
 	 * Retrieves a list of movies based on a given genre.
 	 * 
 	 * @param genre
@@ -23,11 +32,13 @@ public interface MovieService {
 	List<Movie> listMoviesByGenre(String genre);
 
 	/**
-	 * Retrieves a list of movies of a specific cinema based on a given cinema name.
+	 * Retrieves a list of movies of a specific cinema based on a given cinema
+	 * name.
 	 * 
 	 * @param cinema
 	 *            Represents the cinema we want to filter the movies by.
-	 * @return Returns a list of movies of a specific cinema based on a given cinema name.
+	 * @return Returns a list of movies of a specific cinema based on a given
+	 *         cinema name.
 	 */
 	List<Movie> listMoviesByCinemaName(String cinema);
 }

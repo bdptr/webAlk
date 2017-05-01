@@ -30,6 +30,17 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	/**
+	 * Retrieves a movie based on a given movie identifier.
+	 * 
+	 * @param id
+	 *            The identifier of the movie
+	 * @return Returns a movie based on the given movie identifier
+	 */
+	public Movie getMovieById(Long id) {
+		return movieRepo.findOne(id);
+	}
+
+	/**
 	 * Retrieves a list of movies based on a given genre.
 	 * 
 	 * @param genre
@@ -41,11 +52,13 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	/**
-	 * Retrieves a list of movies of a specific cinema based on a given cinema name.
+	 * Retrieves a list of movies of a specific cinema based on a given cinema
+	 * name.
 	 * 
 	 * @param cinema
 	 *            Represents the cinema we want to filter the movies by.
-	 * @return Returns a list of movies of a specific cinema based on a given cinema name.
+	 * @return Returns a list of movies of a specific cinema based on a given
+	 *         cinema name.
 	 */
 	public List<Movie> listMoviesByCinemaName(String cinema) {
 		List<Show> shows = showRepo.findShowByCinema(cinema);

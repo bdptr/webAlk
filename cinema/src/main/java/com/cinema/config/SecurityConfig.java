@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.httpBasic().and().authorizeRequests()
-				.antMatchers("/movies/**", "/movies", "/shows", "/shows/**", "/buy/**").hasRole("CUSTOMER")
+				.antMatchers("/movies/**", "/movies", "/movie/**", "/shows", "/shows/**", "/buy/**").hasRole("CUSTOMER")
 				.antMatchers("/user/**", "/users").hasAnyRole("USER", "CUSTOMER").anyRequest().authenticated().and()
 				.formLogin().and().logout().logoutUrl("/logout").and().csrf().disable();
 	}

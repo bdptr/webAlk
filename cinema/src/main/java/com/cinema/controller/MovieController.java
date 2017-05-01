@@ -20,6 +20,11 @@ public class MovieController {
 	public List<Movie> listMovies() {
 		return movieService.listMovies();
 	}
+	
+	@RequestMapping(value = "/movie/{id}", method = RequestMethod.GET)
+	public Movie getMovieById(@PathVariable("id") Long id) {
+		return movieService.getMovieById(id);
+	}
 
 	@RequestMapping(value = "/movies/{genre}", method = RequestMethod.GET)
 	public List<Movie> listMoviesByGenre(@PathVariable("genre") String genre) {
