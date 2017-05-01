@@ -1,4 +1,10 @@
-# API dokumentáció:
+# Adatbázis
+Szükséges egy <b>cinema</b> schema létrehozása. Az alkalmazás induláskor létrehozza és feltölti az adatbázist tesztadatokkal.
+
+### Adatbázis struktúra:
+https://goo.gl/EaQ4MZ
+
+# API dokumentáció
 ### Filmek lekérdezése:
   URL: /movies<br />
   Metódus: GET<br />
@@ -72,6 +78,3 @@
   - Long userroleid;
   - Long userid;
   - String role;
-  
-# Adatbázis struktúra
-https://goo.gl/EaQ4MZ
