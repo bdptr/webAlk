@@ -35,4 +35,11 @@ public interface UserService {
 	 * @return Returns a confirmation message.
 	 */
 	String logoutPage(HttpServletRequest request, HttpServletResponse response);
+
+	/**
+	 * Retrieves a list of all users with CUSTOMER role.
+	 * 
+	 * @return Returns a list of all users with CUSTOMER role.
+	 */
+	List<User> getUsersWithCustomerRole();
 }

@@ -1,5 +1,7 @@
 package com.cinema.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -16,4 +18,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Query("select u from User u where u.name=?1")
 	public User findUserByName(String name);
+	
+	@Query("select u from UserRole as ur, User as u where ur.userid = u.id and ur.role = 'ROLE_CUSTOMER'")
+	public List<User> getUsersWithCustomerRole();
 }

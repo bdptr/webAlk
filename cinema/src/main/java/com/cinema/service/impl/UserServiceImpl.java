@@ -60,4 +60,13 @@ public class UserServiceImpl implements UserService {
 		}
 		return "logged out";
 	};
+
+	/**
+	 * Retrieves a list of all users with CUSTOMER role.
+	 * 
+	 * @return Returns a list of all users with CUSTOMER role.
+	 */
+	public List<User> getUsersWithCustomerRole() {
+		return userRepo.getUsersWithCustomerRole();
+	};
 }

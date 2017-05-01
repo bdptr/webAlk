@@ -35,4 +35,9 @@ public class UserController {
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
 		return userService.logoutPage(request, response);
 	}
+	
+	@RequestMapping(value = "/users/customers", method = RequestMethod.GET)
+	public List<User> getUsersWithCustomerRole() {
+		return userService.getUsersWithCustomerRole();
+	}
 }
