@@ -5,13 +5,13 @@ import java.util.List;
 import com.cinema.model.Movie;
 
 public interface MovieService {
-
+	
 	/**
 	 * Retrieves a list of all movies.
 	 * 
 	 * @return Returns the list of all movies.
 	 */
-	List<Movie> listMovies();
+	List<Movie> getMovies();
 
 	/**
 	 * Retrieves a movie based on a given movie identifier.

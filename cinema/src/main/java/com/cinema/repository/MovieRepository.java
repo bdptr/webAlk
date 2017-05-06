@@ -10,6 +10,9 @@ import com.cinema.model.Movie;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
+	
+	@Query("select m from Movie m")
+	public List<Movie> getMovies();
 
 	@Query("select m from Movie m where m.genre = ?1")
 	public List<Movie> findMoviesByGenre(String genre);

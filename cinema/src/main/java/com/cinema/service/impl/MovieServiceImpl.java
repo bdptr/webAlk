@@ -19,14 +19,14 @@ public class MovieServiceImpl implements MovieService {
 
 	@Autowired
 	private ShowRepository showRepo;
-
+	
 	/**
 	 * Retrieves a list of all movies.
 	 * 
 	 * @return Returns the list of all movies.
 	 */
-	public List<Movie> listMovies() {
-		return movieRepo.findAll();
+	public List<Movie> getMovies() {
+		return movieRepo.getMovies();
 	}
 
 	/**
