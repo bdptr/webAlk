@@ -33,7 +33,7 @@ public class ShowServiceImpl implements ShowService {
 	 * 
 	 * @return Returns the list of all movies.
 	 */
-	public List<Show> listShows() {
+	public List<Show> getShows() {
 		return showRepo.findAll();
 	}
 }

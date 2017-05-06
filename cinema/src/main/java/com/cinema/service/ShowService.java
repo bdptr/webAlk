@@ -22,5 +22,5 @@ public interface ShowService {
 	 * 
 	 * @return Returns the list of all movies.
 	 */
-	List<Show> listShows();
+	List<Show> getShows();
 }

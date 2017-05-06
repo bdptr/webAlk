@@ -20,6 +20,4 @@ public class SeatDto {
 	public void setIsFree(Boolean isFree) {
 		this.isFree = isFree;
 	}
-	
-	
 }
