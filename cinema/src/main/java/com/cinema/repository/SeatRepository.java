@@ -13,4 +13,7 @@ public interface SeatRepository extends JpaRepository<Seat, Long> {
 
 	@Query("select se from Show s join s.seats se where s.id = ?1")
 	public List<Seat> findSeatsOfShow(Long id);
+	
+	@Query("select s from Seat s where s.id = ?1")
+	public Seat getSeatById(Long id);
 }
